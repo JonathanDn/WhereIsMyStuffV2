@@ -2,11 +2,19 @@ $bgColor : #bada55;
 
 
 body {
-  background-color: $bgColor;
+  // background-color: $bgColor;
+  background-image: 
+    linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+    url('/img/background.jpg');
+  background-size: cover;
 }
 .mainViewSection {
   //  margin-top: 100px;
   width: 100%;
+  color: white;
   border: 2px solid deeppink;
   .mainViewTitle {
     text-align: center;
@@ -23,9 +31,10 @@ body {
   border: 1px solid black;
   display: flex;
   flex-direction: column;
-  width: 20vw;
-  height: 70vh;
-    
+  // text-align: center;
+  width: 270px;
+  // height: 350px;
+  font-size: 25px;
     .addSpaceBtn {
       margin-top: 1vw;
       width: 200px;
@@ -34,36 +43,45 @@ body {
   }
 }
 
-.spaceCardContainer {
+// .spaceCardContainer {
     // display: flex;
     // flex-direction: column;
     /*justify-content: space-around;*/
-      .listContainer {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      // align-content: center;
-      align-items: center;
-      border: 3px solid yellow;
-      width: 270px;
-      height: 350px;
-        .spaceCard {
-            display: flex;
-            justify-content: center;
-            // align-items: center;
-            // align-content: center;
-            width: 200px;
-            // margin: auto;
-            margin-top: 1vw;
-        }
+    // font-size: 10px;
+    // .spaceSideBarTitle {
+    //   font-size: 10px;
+    // }
+    
+    // }
+
+.listContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 3px solid yellow;
+    width: 270px;
+    height: 350px;
+      .spaceCard {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          // align-content: center;
+          width: 200px;
+          // margin: auto;
+          margin-top: 1vw;
+          .spaceCardName {
+            margin-right: 1vw;
+          }
       }
-    }
+  }
 
 
 .storesPrimaryContainer {
 
   display: flex;
   justify-content: center;
+  align-items: center;
   border: 1px solid pink;
   width: 800px;
     .storeContainer {
@@ -115,7 +133,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px;
+  height: 50px;
   .searchBar{
     margin-right: 0.5vw;
     height: 30px;

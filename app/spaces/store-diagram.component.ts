@@ -10,7 +10,7 @@ import {SpaceService} from './space.service';
   directives: [],
   template: `
           <section>
-            <h2>Diagram</h2>
+            <!--<h2>Diagram</h2>-->
             <!--{{ stores | json}}-->
             <div class="storeContainer">
               <div [className]="getClassOfStore(store)" *ngFor="let store of stores">

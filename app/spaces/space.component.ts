@@ -19,7 +19,7 @@ import {SearchComponent} from './search.component';
   template: `
     <section class="mainViewSection" *ngIf="space">
       <!--<button (click)="setStore()">Go Home</button>-->
-      <h2 class="mainViewTitle">Space {{space.name}}</h2>
+      <h1 class="mainViewTitle">{{space.name}}</h1>
 
       <user-search (search)="findItemFromService($event)"></user-search>
       <!--<div>thisPath: {{getPaths() | json}}</div>-->
@@ -30,12 +30,12 @@ import {SearchComponent} from './search.component';
       <!--Test{{space.items | json}}-->
       <div class="primarySpaceContainer">
         <div class="spacesSideBar">
-            <h2>{{storeTypeToAdd}}s</h2>
-            <div class="spaceCardContainer">
+            <!--<h2 class="spaceSideBarTitle"></h2>-->
+            <!--<div class="spaceCardContainer">-->
+              <div class="spaceSideBarTitle">{{storeTypeToAdd}}s</div>
               <store-list *ngIf="!space.items" [stores]="space.stores" (selected)="setStore($event)" (deleteStore)="delete($event)" >the list Should render here</store-list>
-             
               
-            </div>
+            <!--</div>-->
 
           <div *ngIf="!space.items" (click)="renderStoreType();getStorageCard()" class="addSpaceBtn btn btn-primary">+ Add {{storeTypeToAdd}}</div>
           <div  *ngIf="!space.stores" (click)="addItem();getStorageCard()" class="addSpaceBtn btn btn-primary">+ Add items</div>
