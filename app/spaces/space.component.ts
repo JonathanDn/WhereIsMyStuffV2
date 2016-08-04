@@ -38,8 +38,11 @@ import {SearchComponent} from './search.component';
             <!--</div>-->
 
           <div *ngIf="!space.items" (click)="renderStoreType();getStorageCard()" class="addSpaceBtn btn btn-primary">
-          <p class="addSpacePlusIcon glyphicon glyphicon-plus"></p>   Add {{storeTypeToAdd}}</div>
-          <div  *ngIf="!space.stores" (click)="addItem();getStorageCard()" class="addSpaceBtn btn btn-primary">+ Add items</div>
+            <p class="addSpacePlusIcon glyphicon glyphicon-plus"></p>Add {{storeTypeToAdd}}
+          </div>
+          <div *ngIf="!space.stores" (click)="addItem();getStorageCard()" class="addSpaceBtn btn btn-primary">
+            <p class="addSpacePlusIcon glyphicon glyphicon-plus"></p>Add Items
+          </div>
           
         </div>
 
