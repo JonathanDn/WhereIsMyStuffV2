@@ -13,6 +13,7 @@ import {SpaceService} from './space.service';
             <!--<h2>Diagram</h2>-->
             <!--{{ stores | json}}-->
             <div class="storeContainer">
+              <span class="emptyDiv" *ngIf="!stores">Still Empty...</span>
               <div [className]="getClassOfStore(store)" *ngFor="let store of stores">
                 <div class="storeDiagramCardName">{{store.name}}</div>
               </div>

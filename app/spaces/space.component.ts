@@ -33,7 +33,10 @@ import {SearchComponent} from './search.component';
             <!--<h2 class="spaceSideBarTitle"></h2>-->
             <!--<div class="spaceCardContainer">-->
               <div class="spaceSideBarTitle">{{storeTypeToAdd}}s</div>
-              <store-list *ngIf="!space.items" [stores]="space.stores" (selected)="setStore($event)" (deleteStore)="delete($event)" >the list Should render here</store-list>
+              <store-list *ngIf="!space.items" 
+                          [stores]="space.stores" 
+                          (selected)="setStore($event)" 
+                          (deleteStore)="delete($event)" >the list Should render here</store-list>
               
             <!--</div>-->
 

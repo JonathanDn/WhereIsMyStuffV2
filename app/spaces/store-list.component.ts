@@ -16,16 +16,18 @@ import {SpaceModel} from './space.model';
   directives: [],
   selector: 'store-list',
   template: `
-    <section class="listContainer">
-      <div *ngFor="let store of stores" (click)="storeSelected(store)" class="spaceCard btn btn-primary"  >
+  <section>
+    <div class="listContainer">
+      <span class="emptyDiv" *ngIf="!stores">Still Empty...</span>
+      <div *ngFor="let store of stores" (click)="storeSelected(store)" class="spaceCard btn btn-primary">
         <div class="spaceCardName">{{store.name}}</div>
         <button (click)="delete(store)" class="spaceCardIcon btn btn-primary">  <span class="glyphicon glyphicon-trash"></span></button>
         <!--<button (click)="update(store)" class="btn btn-primary">  <span class="glyphicon glyphicon-edit"></span></button>-->
 
       </div>
 
+    </div>
     </section>
-
 
   `
 })
