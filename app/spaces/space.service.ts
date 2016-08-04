@@ -182,6 +182,7 @@ setCurrStore(store) {
 
     } else { //ITEM
       if ( !this.currStore.items)   this.currStore.items = [];     
+      storeData.item = true;
       // console.log('this.currStore created', this.currStore);
       // console.log('item created');
       // console.log('items:', this.currStore.items);

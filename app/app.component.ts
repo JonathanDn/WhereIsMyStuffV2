@@ -4,7 +4,7 @@ import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 
 import {SpaceService} from './spaces/space.service'
 
-import * as io from 'socket.io-client';
+// import * as io from 'socket.io-client';
 
 
 @Component({
@@ -13,12 +13,13 @@ import * as io from 'socket.io-client';
   templateUrl: 'app.component.html',
   //styleUrls: ['../public/css/main.css'],
   encapsulation: ViewEncapsulation.None,
-  providers: [ToastsManager, {provide: 'io', useValue: io}, SpaceService]
+  providers: [ToastsManager, SpaceService]
 
 })
 export class AppComponent { 
   foo(){
     console.log('clicked');
+    window.location.reload()
     
   }
 }

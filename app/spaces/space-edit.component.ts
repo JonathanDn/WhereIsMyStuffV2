@@ -54,7 +54,7 @@ export class SpaceEditComponent implements OnInit {
       name: ['',
               Validators.compose([Validators.required,
                                   Validators.minLength(3),
-                                  Validators.maxLength(100)])],
+                                  Validators.maxLength(10)])],
       // power: [5, Validators.required]
     });
   }

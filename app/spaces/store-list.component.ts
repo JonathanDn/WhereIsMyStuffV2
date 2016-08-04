@@ -47,7 +47,6 @@ export class StoreListComponent implements OnInit {
   }
 
   storeSelected (store) {
-    console.log('here is :');
     this.selected.emit(store); 
   }
 
