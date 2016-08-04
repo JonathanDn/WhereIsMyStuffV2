@@ -52,7 +52,7 @@ export class EditItemComponent implements OnInit {
       name: ['',
               Validators.compose([Validators.required,
                                   Validators.minLength(3),
-                                  Validators.maxLength(100)])],
+                                  Validators.maxLength(10)])],
     });
   }
 }

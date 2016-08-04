@@ -28,47 +28,14 @@ import {SpaceService} from './space.service';
 export class StoreDiagramComponent implements OnInit {
 
   private stores : any;
-  // private space: any;
   constructor( private spaceService: SpaceService) { 
-    // this.space = this.spaceService.getSpace();
-    // // console.log('this.space in store:', this.space);
-    
-    // this.stores = this.space.stores;
-    // console.log('this.stores ', this.stores );
-
-   
     
   }
-  // johnny's image rendering
   getClassOfStore (store) {
-    // console.log('checking class:', store);
-    // console.log('checking class:', store);
-    // get's the current store object --> storage / item
-
-
-    // NEED TO GET THE STORE.STORES NOT UNDEFINED
-
-    // it's an item
-    if(!store) {
-      // console.log('!store - returned Store class');
-      if (store.items) {
-        // console.log('returned item');
-        return 'item';
-      } 
-    }
-    // it's a storage
-    else {
-      // console.log('item was rendered')
-       if (!store.items) {
-        // console.log('store defined - returned item');
-        return 'item';
-      } 
-      // console.log('store - returned Store class');
-      return 'store';
-    }
+    if (!store.item) return 'store'
+    else             return 'item'
   }
   ngOnInit() { 
-    // console.log('stores in Diagram:',this.stores);
   }
 
 }
