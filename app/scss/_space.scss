@@ -8,14 +8,16 @@ body {
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
       ),
-    url('/img/background.jpg');
-  // background-size: cover;
+      url('/img/background.jpg');
+  background-repeat: round;
+  // background-size: auto 100%;
 }
+
 .mainViewSection {
-  //  margin-top: 100px;
-  width: 100%;
+  // margin-top: 100px;
+  // width: 100%;
   color: white;
-  border: 2px solid deeppink;
+  // border: 2px solid deeppink;
   .mainViewTitle {
     text-align: center;
   }
@@ -25,20 +27,34 @@ body {
 .primarySpaceContainer {
   display: flex;
   flex-direction: row;
-  border: 1px solid green;
+  // border: 1px solid green;
   border-radius: 5px;
   .spacesSideBar {
-  border: 1px solid black;
+  border: 1px solid #333333;
   display: flex;
   flex-direction: column;
+  // justify-content: center;
+  align-items: center;
   // text-align: center;
   width: 270px;
   // height: 350px;
   font-size: 25px;
+
+  background: rgba(60, 60, 60, 0.9);
+  border-radius: 5px;
     .addSpaceBtn {
-      margin-top: 1vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 5px;
+      margin-bottom: 10px;
       width: 200px;
-      margin: auto;
+      .addSpacePlusIcon {
+        display: flex;
+        align-self: flex-end;
+        margin-right: 5px;
+        
+      }
     }
   }
 }
@@ -48,30 +64,32 @@ body {
     // flex-direction: column;
     /*justify-content: space-around;*/
     // font-size: 10px;
-    // .spaceSideBarTitle {
-    //   font-size: 10px;
-    // }
+    
     
     // }
-
+.spaceSideBarTitle {
+  margin-top: 15px;
+  text-align: center;
+}
 .listContainer {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    border: 3px solid yellow;
+    // border: 3px solid yellow;
     width: 270px;
-    height: 350px;
+    height: 300px;
       .spaceCard {
           display: flex;
-          justify-content: center;
+          justify-content: space-between;
           align-items: center;
-          // align-content: center;
           width: 200px;
-          // margin: auto;
           margin-top: 1vw;
           .spaceCardName {
             margin-right: 1vw;
+          }
+          .spaceCardIcon {
+            padding: 0;
           }
       }
   }
@@ -82,7 +100,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid pink;
+  // border: 1px solid pink;
   width: 800px;
     .storeContainer {
     display: flex;
@@ -90,7 +108,11 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    border: 2px solid blue;
+
+    // background: rgb(60, 60, 60);
+    background: rgba(60, 60, 60, 0.9);
+    
+    border: 1px solid #333333;
     border-radius: 5px;
     width: 300px;
     height: 300px;
@@ -99,8 +121,8 @@ body {
       flex-direction: column;
       justify-content: flex-end;
       align-items: flex-end;
-      border: 1px solid darkcyan;
-      border-radius: 5px;
+      border: 1px solid #808080;
+      border-radius: 8px;
       width: 100px;
       height: 100px;
       background-image: url("/img/storageRoom.jpg");
@@ -108,9 +130,11 @@ body {
     
       .storeDiagramCardName {
         color: white;
-        background-color: darkgreen;
-        border: 1px solid seagreen;
+        background-color: #808080;
+        border: 1px solid #333333;
         border-top-left-radius: 5px;
+        border-bottom-right-radius: 8px;
+        padding: 0 3 0 3;
       }
     }
     .item {
@@ -129,11 +153,12 @@ body {
 }
 
 .searchContainer {
-  border: 5px solid white;
+  // border: 5px solid white;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
+  color: black;
   .searchBar{
     margin-right: 0.5vw;
     height: 30px;

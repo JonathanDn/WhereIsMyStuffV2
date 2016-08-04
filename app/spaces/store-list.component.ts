@@ -19,7 +19,7 @@ import {SpaceModel} from './space.model';
     <section class="listContainer">
       <div *ngFor="let store of stores" (click)="storeSelected(store)" class="spaceCard btn btn-primary"  >
         <div class="spaceCardName">{{store.name}}</div>
-        <button (click)="delete(store)" class="btn btn-primary">  <span class="glyphicon glyphicon-trash"></span></button>
+        <button (click)="delete(store)" class="spaceCardIcon btn btn-primary">  <span class="glyphicon glyphicon-trash"></span></button>
         <!--<button (click)="update(store)" class="btn btn-primary">  <span class="glyphicon glyphicon-edit"></span></button>-->
 
       </div>
